@@ -33,9 +33,6 @@ public class Tecnico extends Pessoa implements Serializable {
 	public void setChamado(List<Chamado> chamado) {
 		this.chamado = chamado;
 	}
-	
-	
-	
-	
+
 
 }

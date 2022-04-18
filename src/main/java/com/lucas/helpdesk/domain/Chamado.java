@@ -2,6 +2,7 @@ package com.lucas.helpdesk.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -145,9 +146,6 @@ public class Chamado implements Serializable {
 		Chamado other = (Chamado) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
-	
-	
+
 
 }

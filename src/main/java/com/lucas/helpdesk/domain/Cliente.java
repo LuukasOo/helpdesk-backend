@@ -33,9 +33,6 @@ public class Cliente extends Pessoa implements Serializable {
 	public void setChamados(List<Chamado> chamados) {
 		this.chamados = chamados;
 	}
-	
-	
-	
-	
+
 
 }
