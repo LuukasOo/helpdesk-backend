@@ -1,4 +1,4 @@
-package com.lucas.helpdesk.service;
+package com.lucas.helpdesk.services;
 
 import java.util.Optional;
 
@@ -7,16 +7,16 @@ import org.springframework.stereotype.Service;
 
 import com.lucas.helpdesk.domain.Tecnico;
 import com.lucas.helpdesk.repositories.TecnicoRepository;
+import com.lucas.helpdesk.services.exceptions.ObjectnotFoundException;
 
 @Service
 public class TecnicoService {
-	
+
 	@Autowired
 	private TecnicoRepository repository;
-	
-	public Tecnico findbyId(Integer id) {
-		Optional<Tecnico> obj = repository.findById(id);
-		return obj.orElse(null);
-	}
 
+	public Tecnico findById(Integer id) {
+		Optional<Tecnico> obj = repository.findById(id);
+		return obj.orElseThrow(() -> new ObjectnotFoundException("Objeto não encontrado! Id: " + id));
+	}
 }

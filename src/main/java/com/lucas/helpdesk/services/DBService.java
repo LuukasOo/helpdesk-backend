@@ -1,4 +1,4 @@
-package com.lucas.helpdesk.service;
+package com.lucas.helpdesk.services;
 
 import java.util.Arrays;
 

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.lucas.helpdesk.domain.Tecnico;
 import com.lucas.helpdesk.domain.dtos.TecnicoDTO;
-import com.lucas.helpdesk.service.TecnicoService;
+import com.lucas.helpdesk.services.TecnicoService;
 
 @RestController
 @RequestMapping(value = "/tecnicos")
@@ -20,8 +20,8 @@ public class TecnicoResource {
 	private TecnicoService service;
 	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<TecnicoDTO> findbyId(@PathVariable Integer id){
-		Tecnico obj = service.findbyId(id);
+	public ResponseEntity<TecnicoDTO> findById(@PathVariable Integer id) {
+		Tecnico obj = service.findById(id);
 		return ResponseEntity.ok().body(new TecnicoDTO(obj));
 	}
 
