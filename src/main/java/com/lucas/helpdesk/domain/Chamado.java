@@ -2,7 +2,6 @@ package com.lucas.helpdesk.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -25,7 +24,7 @@ public class Chamado implements Serializable {
 	protected Integer id;
 	
 	@JsonFormat(pattern = "dd/MM/yyyy")
-	private LocalDate dataAabertura = LocalDate.now();
+	private LocalDate dataAbertura = LocalDate.now();
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate dataFechamento;
 	
@@ -66,12 +65,13 @@ public class Chamado implements Serializable {
 		this.id = id;
 	}
 
-	public LocalDate getDataAabertura() {
-		return dataAabertura;
+
+	public LocalDate getDataAbertura() {
+		return dataAbertura;
 	}
 
-	public void setDataAabertura(LocalDate dataAabertura) {
-		this.dataAabertura = dataAabertura;
+	public void setDataAbertura(LocalDate dataAbertura) {
+		this.dataAbertura = dataAbertura;
 	}
 
 	public LocalDate getDataFechamento() {
